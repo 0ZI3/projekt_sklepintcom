@@ -1,0 +1,40 @@
+<!--
+  @fileoverview index.html
+
+  @description
+  Plik odpowiada za natychmiastowe przekierowanie uzytkownika do glownej strony sklepu
+  znajdujacej sie pod adresem public/index.php.
+  Stanowi punkt wejsciowy projektu dla adresu glownego i zapewnia zgodnosc z
+  konfiguracjami, w ktorych serwer domyslnie obsluguje index.html.
+
+  @scope
+  - Ustawia automatyczne przekierowanie HTTP-equiv (meta refresh).
+  - Wykonuje przekierowanie JavaScript przez window.location.replace().
+  - Udostepnia link awaryjny, jesli automatyczne przekierowanie nie zadziala.
+
+  @behavior
+  - Po zaladowaniu dokumentu przegladarka natychmiast kieruje uzytkownika do public/index.php.
+  - Metoda replace nie dodaje strony posredniej do historii przegladarki.
+  - W przypadku blokady skryptow lub opoznienia, uzytkownik moze przejsc recznie przez link.
+-->
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Przekierowanie...</title>
+    <meta http-equiv="refresh" content="0; url=public/index.php" />
+    <script>
+      window.location.replace("public/index.php");
+    </script>
+  </head>
+  <body>
+    <p>Trwa przekierowanie do strony glownej sklepu...</p>
+    <p>
+      <a href="public/index.php"
+        >Kliknij tutaj, jesli nie nastapilo automatyczne przekierowanie.</a
+      >
+    </p>
+  </body>
+</html>
