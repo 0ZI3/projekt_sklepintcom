@@ -1,0 +1,35 @@
+/*
+ * @fileoverview app.css
+ *
+ * @description
+ * Source stylesheet aplikacji oparty o Tailwind CSS.
+ * Plik definiuje dyrektywy Tailwind oraz bazowe style globalne,
+ * w tym zmienne motywu i domyslne ustawienia wygladu strony.
+ *
+ * @scope
+ * - Dyrektywy @tailwind dla warstw base/components/utilities.
+ * - Definicja zmiennych CSS (kolory, powierzchnie, typografia).
+ * - Globalne style dla elementu body i wspolnych sekcji UI.
+ * - Punkt wejsciowy do kompilacji arkusza wynikowego.
+ *
+ * @behavior
+ * - Plik zrodlowy: po kompilacji generuje finalny CSS dla aplikacji.
+ * - Build: uruchom `npm run build:css`, aby wygenerowac public/dist/app.css.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page-accent: #6366f1;
+  --page-accent-2: #ec4899;
+  --surface: #020617;
+  --text-muted: rgba(148, 163, 184, 1);
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--surface);
+  color: #f8fafc;
+}
