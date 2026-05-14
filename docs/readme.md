@@ -10,6 +10,7 @@ z podziałem na:
 - panel pracowniczy (dashboard, produkty, zamówienia, klienci, analityka),
 - API koszyka i checkout,
 - integracje płatności Stripe Checkout.
+- login do konta admina - admin@sklepint.local hasło - Admin
 
 ---
 
